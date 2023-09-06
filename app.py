@@ -2,7 +2,8 @@
 
 
 import os
-import bibloteca
+import bibloteca as b 
+
 
 print("Bienvenido!")
 respuesta = ''
@@ -21,19 +22,19 @@ while respuesta != "salir":
     os.system ("cls") #Limpiar pantalla
     if opt.isnumeric():
         if int(opt) == 1:
-            prestar_ejemplar_libro()
+            b.prestar_ejemplar_libro()
             print()
         elif int(opt) == 2:
             #completar
             print()
         elif int(opt) == 3:
-            registrar_nuevo_libro()
+            b.registrar_nuevo_libro()
             print()
         elif int(opt) == 4:
             #completar
             print()
         elif int(opt) == 5:
-            ejemplares_prestados()
+            b.ejemplares_prestados()
             print()
         elif int(opt) == 6:
             respuesta = "salir"

@@ -1,5 +1,4 @@
 import libro as l
-
 # Crear una lista vacía para almacenar los libros
 libros = []
 
@@ -14,24 +13,14 @@ def ejemplares_prestados():
             print(f"Libro: {libro['titulo']} por {libro['autor']}")
             print(f"Cantidad de ejemplares prestados: {libro['cant_ej_pr']}")
     else:
+        print(f"Libro: {libro['titulo']} por {libro['autor']}")
         print("No hay ejemplares prestados en este momento.")
     return None
 
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
-    titulo = input("Ingrese el título del nuevo libro: ")
-    autor = input("Ingrese el autor del nuevo libro: ")
-    cant_ej_ad = int(input("Ingrese la cantidad de ejemplares adquiridos: "))
-    cod = generar_codigo()
-    nuevo_libro = {
-        'cod': cod,
-        'cant_ej_ad': cant_ej_ad,
-        'cant_ej_pr': 0,
-        'titulo': titulo,
-        'autor': autor
-    }
     libros.append(nuevo_libro)
-    print(f"Libro registrado con éxito. Código: {cod}")
+    print(f"Libro registrado con éxito. Código: {nuevo_libro['cod']}")
     return None
 
 def eliminar_ejemplar_libro():
@@ -58,9 +47,9 @@ def prestar_ejemplar_libro():
     return None
 
 def devolver_ejemplar_libro():
-    #completar
+    codigo = input("Ingrese el codigo del libro a devolver.")
+    for libro in libros:
+        if libro['cod']
+
     return None
 
-def nuevo_libro():
-    #completar
-    return None
