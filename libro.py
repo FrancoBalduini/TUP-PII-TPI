@@ -12,16 +12,9 @@ def nuevo_libro():
     autor = input("Ingrese el autor del nuevo libro: ")
     cant_ej_ad = int(input("Ingrese la cantidad de ejemplares adquiridos: "))
     cod = generar()
-    nuevo_libro = {
-        'cod': cod,
-        'cant_ej_ad': cant_ej_ad,
-        'cant_ej_pr': 0,
-        'titulo': titulo,
-        'autor': autor
-    }
+    nuevo_libro = {'cod': cod, 'cant_ej_ad': cant_ej_ad,'cant_ej_pr': 0,'titulo': titulo,'autor': autor}
     return nuevo_libro
 
 def generar_codigo():
     codigo = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(8))
     return codigo
-    return None

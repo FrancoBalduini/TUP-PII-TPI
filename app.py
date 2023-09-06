@@ -12,7 +12,7 @@ def menu():
     print("1 - Gestionar Prestamo")
     print("2 - Gestionar Devolucion")
     print("3 - Registrar nuevo libro")
-    print("4 - Elimiar ejemplar")
+    print("4 - Eliminar ejemplar")
     print("5 - Mostrar ejemplares perstados")
     print("6 - Salir")
 
@@ -25,13 +25,13 @@ while respuesta != "salir":
             b.prestar_ejemplar_libro()
             print()
         elif int(opt) == 2:
-            #completar
+            b.devolver_ejemplar_libro()
             print()
         elif int(opt) == 3:
             b.registrar_nuevo_libro()
             print()
         elif int(opt) == 4:
-            #completar
+            b.eliminar_ejemplar_libro()
             print()
         elif int(opt) == 5:
             b.ejemplares_prestados()
